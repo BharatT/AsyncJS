@@ -11,7 +11,7 @@ function getPosts(){
 
 // its simple function without call back so create post not working ....
 
-
+/*
 function createPost(post){
     setTimeout(() => {
 posts.push(post)
@@ -20,4 +20,15 @@ posts.push(post)
 
 getPosts();
  
+*/
 
+
+function createPost(post,callback){
+    setTimeout(() => {
+        posts.push(post);
+        callback();
+    },2000);
+}
+
+
+createPost({title: "Post Three", Body: "This is threed post" }, getPosts);

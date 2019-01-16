@@ -33,15 +33,36 @@ createPost({title: "Post three", Body : " This is post three"})
             .catch(err => console.log(err));
 */
 
+//  Async / wait  
+
+async function init(){
+   await createPost({title: "Post three", Body : " This is post three"});
+
+   getPosts();
+}
+init();
+
+
+
+
+
+
+
+
+
+
+
 // promice.all
 
-
+/*
 const promic1 = Promise.resolve("Hello Bharat");
 const promic2 = 10;
 const promic3 = new Promise((resolve, reject) => setTimeout(resolve,2000, ' Jai Shree Ram'));
 const promic4 = fetch("https://jsonplaceholder.typicode.com/users").then( res => res.json())
 
 Promise.all([promic1,promic2,promic3,promic4]).then(value => console.log(value));
+*/
+
 
 
 

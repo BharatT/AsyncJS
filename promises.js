@@ -34,13 +34,27 @@ createPost({title: "Post three", Body : " This is post three"})
 */
 
 //  Async / wait  
-
+/*
 async function init(){
    await createPost({title: "Post three", Body : " This is post three"});
 
    getPosts();
 }
 init();
+*/
+
+// Async / Await / Fatch
+
+async function fetchUser(){
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await res.json();
+
+  console.log(data);
+}
+
+fetchUser();
+
+
 
 
 
